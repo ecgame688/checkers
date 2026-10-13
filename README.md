@@ -1,1 +1,24 @@
-# checkers
+# Checkers installation pages
+
+Static sharing pages: `install_en.html`, `install_vi.html`, `install_pt.html`,
+`install_es.html`, and `install_tr.html`. Publish this directory with its `assets/`
+folder to GitHub Pages. No build step is required.
+
+Android visitors automatically open Google Play. iPhone and iPad visitors
+(including iPadOS desktop user agents) automatically open the App Store:
+https://apps.apple.com/app/id6820478701
+Desktop visitors stay on the page with both store buttons. Both links work
+without JavaScript and remain available if automatic navigation is blocked.
+
+The icon is copied from `client/assets/icon/icon.png`. Content reflects the five
+languages, four rule variants, and three play modes in the game. Online play
+requires internet; room invitations require entering the shared code in the app.
+
+After publishing, the app can use a page URL via its existing build option:
+`--dart-define=SHARE_URL=https://YOUR-HOST/install_en.html`
+Use the actual published URL, including any GitHub Pages repository path.
+The app's current default share URL is not changed by these files.
+
+`index.html` selects the first supported browser language, falling back to English.
+Without JavaScript, it displays links to all available languages. You can share
+the published directory URL to let visitors choose their device language automatically.
